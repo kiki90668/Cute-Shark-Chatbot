@@ -66,6 +66,7 @@ def index():
         
     return render_template("index.html", chat_history=session["chat_history"])
 
+# 重設對話紀錄
 @app.route("/reset_chat", methods=["POST"])
 def reset_chat():
     session["chat_history"] = []
