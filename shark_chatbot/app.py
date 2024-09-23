@@ -34,12 +34,12 @@ def get_chatbot_response(prompt):
     reply = response.choices[0].message.content
     return reply
                 
-# 當用戶在瀏覽器中訪問應用程式的根 URL 時，呼叫index()
+# 當用戶在瀏覽器中訪問根時，呼叫index()
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "GET":
         if session.get("after_post"):
-            # 來自於 POST 後的重定向，不重置聊天紀錄
+            # 不重置聊天紀錄
             session.pop("after_post", None)
         else:
             # 初次訪問或刷新頁面，重置聊天紀錄
@@ -66,7 +66,7 @@ def index():
         
     return render_template("index.html", chat_history=session["chat_history"])
 
-# 重設對話紀錄
+# 重設聊天紀錄
 @app.route("/reset_chat", methods=["POST"])
 def reset_chat():
     session["chat_history"] = []
