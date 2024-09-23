@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#chatbox {
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fafafa;
+    margin-bottom: 10px;
+}
+
+.message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    clear: both;
+}
+
+.user-message {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+    float: right;
+}
+
+.bot-message {
+    background-color: #ececec;
+    align-self: flex-start;
+    float: left;
+}
+
+.input-area {
+    display: flex;
+}
+
+.input-area input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.input-area button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #3894d1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input-area button:hover {
+    background-color: #286d98;
+}
+
+.reset-button {
+    display: flex;
+}
+
+.reset-button button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #4c6baf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reset-button button:hover {
+    background-color: #3b809a;
+}
